@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #333;
+  background-color: #eaeaea;
+}
+html,
+body,
+#app,
+#app > div {
+  height: 100%;
+}
+/* create 3 columns with 25% width and 1 middle column with 50% width */
+.grid {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+}
+.first {
+  grid-column: 1;
+}
+.second {
+  grid-column: 2;
+}
+.third {
+  grid-column: 3;
+}
+/* create container for lists */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+/* create container for items */
+.ItemsContainer {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.ItemsContainer > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 10px;
+}
+/* create image white background and shadow, scale to fit into div */
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.ImgContainer {
+  background-color: white;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px 5px #ccc;
+}
+/* reduce margin of paragraph tags */
+h1,
+h3,
+p {
+  margin: 0;
+}
+/* searchbar */
+.SearchBar {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: auto;
+  border-radius: 4px;
+}
+.SelectBox {
+  background-color: #fff;
+  grid-column: 1;
+  padding: 15px 10px;
+  align-self: start;
+}
+
+.SelectBox > select {
+  width: 100%;
+  border: none;
+  background-color: #fff;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.SearchBox {
+  grid-column: 2;
+  grid-auto-rows: max-content;
+  background-color: #fff;
+  border-left: 1px solid #eaeaea;
+}
+.SearchBox > input {
+  width: 100%;
+  padding: 15px 0 15px 10px;
+  border: none;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.SearchBox > input:focus {
+  padding-right: 10px;
+}
+.SearchBoxDrop {
+  background-color: #fff;
+  overflow: scroll;
+}
+.SearchBoxDrop > ul {
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  list-style: none;
+}
+.SearchBoxDrop > ul > li {
+  padding: 10px 10px;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 0% 100% 0%;
+  }
+  .ItemsContainer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .SearchBar {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 1rem;
+  }
+  .SelectBox {
+    box-sizing: inherit;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 992px) {
+}
+
+@media screen and (min-width: 993px) {
+}
